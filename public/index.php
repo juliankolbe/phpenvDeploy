@@ -4,10 +4,17 @@ require_once '../vendor/autoload.php';
 
 $database = new medoo([
     'database_type' => 'sqlite',
-'database_file' => '../storage/database.db'
+    'database_file' => '../storage/database.db'
 ]);
 
+$comment = new SitePoint\Comment($database);
+$comment->setEmail('juleskules@live.com')
+    ->setName('Jules Kules')
+    ->setComment('It worksssss!')
+    ->setComment('Hooray! Saving comments works!')
+    ->save();
 
+dump($database->error());
 
 ?>
 

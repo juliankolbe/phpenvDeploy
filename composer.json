@@ -9,10 +9,16 @@
             "email": "juliankolbe@live.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "SitePoint\\": "src"
+        }
+    },
     "require": {
         "catfan/medoo": "^1.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^3.0"
     }
+
 }
